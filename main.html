@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>配置</title>
+    <link rel="stylesheet" href="./form/css/main.css">
+    <!-- <link rel="stylesheet" href="./form/css/configurate.css"> -->
+    <link rel="stylesheet" href="./form/css/dialog.css">
+    <link rel="stylesheet" href="./form/lib/draglua/draglua.min.css">
+
+    <!--[if IE]>
+        <style type="text/css">
+            .dialog {
+                _position: absolute;
+            }
+        </style>
+    <![endif]-->
+
+</head>
+
+<!-- <body ng-app="app" ng-controller="ctrl"> -->
+
+<body>
+    <div class="head"></div>
+    <div class="main">
+        <!-- 左侧 选择组件区域 -->
+        <div class="left">
+            <div class="title">选择组件</div>
+            <div class="left-main">
+                <div class="left-components">
+                    <div class="left-components-head" onclick="openCloseLeft(event)">
+                        <div class="title">组件列表</div>
+                        <div class="title-icon icon-open"></div>
+                    </div>
+                    <div class="left-components-main">
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'area')"
+                            ondragover="dragOver(event)" data-template="area-default">
+                            <div class="form-area">表单区域</div>
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-input">
+                            <!-- <input type="text" name="" id="" placeholder="输入框" disabled> -->
+                            输入框
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-select">
+                            下拉框
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-multi-select">
+                            多级下拉框
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-radio">
+                            单选框
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-checkbox">
+                            多选框
+                        </div>
+
+                        <!-- <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-single-line">
+                            单行文本
+                        </div> -->
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-textarea">
+                            多行文本
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-date">
+                            时间选择框
+                        </div>
+
+                        <!-- <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-double-date">
+                            开始-结束选择框
+                        </div> -->
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-table">
+                            表格
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left-components">
+                    <div class="left-templates-head" onclick="openCloseLeft(event)">
+                        <div class="title">模板组件列表</div>
+                        <div class="title-icon icon-open"></div>
+                    </div>
+                    <div class="left-templates-main">
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-adress">
+                            <div class="form-area">地址三级联动</div>
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'component')"
+                            ondragover="dragOver(event)" data-component="component-time-range">
+                            <div class="form-area">时间范围</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="left-templates">
+                    <div class="left-templates-head" onclick="openCloseLeft(event)">
+                        <div class="title">模板区域列表</div>
+                        <div class="title-icon icon-open"></div>
+                    </div>
+                    <div class="left-templates-main">
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'area')"
+                            ondragover="dragOver(event)" data-template="area-xzba">
+                            <div class="form-area">新增报案</div>
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'area')"
+                            ondragover="dragOver(event)" data-template="area-demos">
+                            <div class="form-area">示例区域</div>
+                        </div>
+
+                        <div class="form-component" draggable="true" ondragstart="dragStart(event, this, 'insert', 'area')"
+                            ondragover="dragOver(event)" data-template="area-test">
+                            <div class="form-area">测试区域</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-foot">
+                <!-- <button class="open-dialog" onclick="openDialog()">查看模板库</button> -->
+            </div>
+        </div>
+        <!-- 中间 生成页面区域 -->
+        <div class="view">
+            <div class="title">生成页面</div>
+            <div id="view-main" ondragover="dragOver(event)" ondrop="drop(event,this,'insert','view-main')">
+                <!-- 实际生成页面内容 -->
+                
+                <!-- 页面底部按钮 footer-button -->
+                <div class="form-area footer-button">
+                    <div class="form-component button-submit">
+                        <button class="submit">提交</button>
+                    </div>
+                    <!-- <div class="form-component button-submit">
+                        <button class="submit">提交</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="view-foot">
+                <button class="complete" onclick="complete()">完成导出</button>
+            </div>
+        </div>
+        <!-- 右侧 配置属性区域 -->
+        <!-- 1 input 2 select -->
+        <div class="right">
+            <div class="title">配置属性</div>
+
+            <div class="right-main">
+                <div class="right-component right-area">
+                    <div class="title">区域属性</div>
+                    <form action="" onsubmit="return saveAttribution('area')">
+                        <div class="attribution-component">
+
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">区域标题</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="10">
+                        </div>
+
+                        <div class="right-foot">
+                            <!-- <button type="submit" class="save" onclick="saveAttribution('area')">保存</button> -->
+                            <button type="button" class="reset" onclick="resetAttribution('area')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <!-- <button type="button" class="delete" onclick="deleteAttribution('area')">删除</button> -->
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-input">
+                    <div class="title">输入框属性</div>
+                    <form action="" onsubmit="return saveAttribution('input')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">placeholder</span>
+                            </div>
+                            <input type="text" class="placeholder" maxlength="15">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly" class="radio" name="readOnly" value="false" checked
+                                onclick="$(this).parent().next().hide().find('select.url-input').removeProp('required')">
+                            <label for="readOnly">输入</label>
+                            <input type="radio" id="isReadOnly" class="radio" name="readOnly" value="true" onclick="$(this).parent().next().show().find('select.url-input').prop('required',true)">
+                            <label for="isReadOnly">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-input" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required" class="radio" name="required" value="true" checked>
+                            <label for="required">必填</label>
+                            <input type="radio" id="isrequired" class="radio" name="required" value="false">
+                            <label for="isrequired">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('input')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('input')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-select">
+                    <div class="title">下拉框属性</div>
+                    <form action="" onsubmit="return saveAttribution('select')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly-select" class="radio" name="readOnly" value="false"
+                                checked onclick="$(this).parent().next().hide().find('select.url-select').removeProp('required')">
+                            <label for="readOnly-select">输入</label>
+                            <input type="radio" id="isReadOnly-select" class="radio" name="readOnly" value="true"
+                                onclick="$(this).parent().next().show().find('select.url-select').prop('required',true)">
+                            <label for="isReadOnly-select">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-select" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">选项类型</span>
+                            </div>
+                            <input type="radio" id="static" class="radio" name="optionType" value="static" checked
+                                onclick="$(this).parent().next().next().hide().find('select.url-options').removeProp('required').parent().prev().show()">
+                            <label for="static">固定</label>
+                            <input type="radio" id="load" class="radio" name="optionType" value="load" onclick="$(this).parent().next().next().show().find('select.url-options').prop('required',true).parent().prev().hide()">
+                            <label for="load">读取</label>
+                        </div>
+                        <!-- 固定options编辑栏 -->
+                        <div class="attribution-component option-edit-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text"></span>
+                            </div>
+                            <button type="button" class="button-open-dialog" onclick="openOptionDialog(event,'dialog-select-edit')">编辑选项</button>
+                        </div>
+                        <div class="attribution-component option-url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">options-url</span>
+                            </div>
+                            <select name="" id="" class="url-options" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required-select" class="radio" name="required" value="true" checked>
+                            <label for="required-select">必填</label>
+                            <input type="radio" id="isrequired-select" class="radio" name="required" value="false">
+                            <label for="isrequired-select">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('select')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('select')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-multi-select">
+                    <div class="title">多级下拉框属性</div>
+                    <form action="" onsubmit="return saveAttribution('multi-select')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly-multi-select" class="radio" name="readOnly" value="false"
+                                checked onclick="$(this).parent().next().hide().find('select.url-multi-select').removeProp('required')">
+                            <label for="readOnly-multi-select">输入</label>
+                            <input type="radio" id="isReadOnly-multi-select" class="radio" name="readOnly" value="true"
+                                onclick="$(this).parent().next().show().find('select.url-multi-select').prop('required',true)">
+                            <label for="isReadOnly-multi-select">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-multi-select" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">选项类型</span>
+                            </div>
+                            <input type="radio" id="static-multi" class="radio" name="optionType" value="static" checked
+                                onclick="$(this).parent().next().next().hide().find('select.url-multi-select').removeProp('required').parent().prev().show()">
+                            <label for="static-multi">固定</label>
+                            <input type="radio" id="load-multi" class="radio" name="optionType" value="load" onclick="$(this).parent().next().next().show().find('select.url-multi-select').prop('required',true).parent().prev().hide()">
+                            <label for="load-multi">读取</label>
+                        </div>
+                        <!-- 固定options编辑栏 -->
+                        <div class="attribution-component option-edit-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text"></span>
+                            </div>
+                            <button type="button" class="button-open-dialog" onclick="openMultiDialog(event,'dialog-multi-select-edit')">编辑选项</button>
+                        </div>
+                        <div class="attribution-component option-url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">options-url</span>
+                            </div>
+                            <select name="" id="" class="url-options" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required-multi-select" class="radio" name="required" value="true"
+                                checked>
+                            <label for="required-multi-select">必填</label>
+                            <input type="radio" id="isrequired-multi-select" class="radio" name="required" value="false">
+                            <label for="isrequired-multi-select">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('multi-select')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('multi-select')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-radio">
+                    <div class="title">单选框属性</div>
+                    <form action="" onsubmit="return saveAttribution('radio')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly-radio" class="radio" name="readOnly" value="false" checked
+                                onclick="$(this).parent().next().hide().find('select.url-radio').removeProp('required')">
+                            <label for="readOnly-radio">输入</label>
+                            <input type="radio" id="isReadOnly-radio" class="radio" name="readOnly" value="true"
+                                onclick="$(this).parent().next().show().find('select.url-radio').prop('required',true)">
+                            <label for="isReadOnly-radio">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-radio" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <!-- 固定options编辑栏 -->
+                        <div class="attribution-component radio-edit-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text"></span>
+                            </div>
+                            <button type="button" class="button-open-dialog" onclick="openRadioDialog(event,'dialog-radio-edit')">编辑选项</button>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required-radio" class="radio" name="required" value="true" checked>
+                            <label for="required-radio">必填</label>
+                            <input type="radio" id="isrequired-radio" class="radio" name="required" value="false">
+                            <label for="isrequired-radio">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('radio')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('radio')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-checkbox">
+                    <div class="title">多选框属性</div>
+                    <form action="" onsubmit="return saveAttribution('checkbox')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly-checkbox" class="radio" name="readOnly" value="false"
+                                checked onclick="$(this).parent().next().hide().find('select.url-checkbox').removeProp('required')">
+                            <label for="readOnly-checkbox">输入</label>
+                            <input type="radio" id="isReadOnly-checkbox" class="radio" name="readOnly" value="true"
+                                onclick="$(this).parent().next().show().find('select.url-checkbox').prop('required',true)">
+                            <label for="isReadOnly-checkbox">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-checkbox" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <!-- 固定options编辑栏 -->
+                        <div class="attribution-component checkbox-edit-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text"></span>
+                            </div>
+                            <button type="button" class="button-open-dialog" onclick="openCheckboxDialog(event,'dialog-checkbox-edit')">编辑选项</button>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required-checkbox" class="radio" name="required" value="true"
+                                checked>
+                            <label for="required-checkbox">必填</label>
+                            <input type="radio" id="isrequired-checkbox" class="radio" name="required" value="false">
+                            <label for="isrequired-checkbox">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('checkbox')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('checkbox')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-textarea">
+                    <div class="title">多行文本框属性</div>
+                    <form action="" onsubmit="return saveAttribution('textarea')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">placeholder</span>
+                            </div>
+                            <input type="text" class="placeholder" maxlength="15">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">行数</span>
+                            </div>
+                            <input type="number" class="rows" required maxlength="1">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字数限制</span>
+                            </div>
+                            <input type="number" class="maxlength" required maxlength="4">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly-textarea" class="radio" name="readOnly" value="false"
+                                checked onclick="$(this).parent().next().hide().find('select.url-textarea').removeProp('required')">
+                            <label for="readOnly-textarea">输入</label>
+                            <input type="radio" id="isReadOnly-textarea" class="radio" name="readOnly" value="true"
+                                onclick="$(this).parent().next().show().find('select.url-textarea').prop('required',true)">
+                            <label for="isReadOnly-textarea">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-textarea" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required-textarea" class="radio" name="required" value="true"
+                                checked>
+                            <label for="required-textarea">必填</label>
+                            <input type="radio" id="isrequired-textarea" class="radio" name="required" value="false">
+                            <label for="isrequired-textarea">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('textarea')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('textarea')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-date">
+                    <div class="title">时间选择框属性</div>
+                    <form action="" onsubmit="return saveAttribution('date')">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="4">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">placeholder</span>
+                            </div>
+                            <input type="text" class="placeholder" maxlength="15">
+                        </div>
+                        <!-- <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">id</span>
+                            </div>
+                            <input type="text" class="id" maxlength="20">
+                        </div> -->
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">name</span>
+                            </div>
+                            <input type="text" class="name" required maxlength="20">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值范围</span>
+                            </div>
+                            <!-- .find('input.Wdate').removeProp('required') .find('input.Wdate').prop('required',true)  -->
+                            <input type="radio" id="defaultDate" class="radio" name="dateRange" value="default" checked
+                                onclick="$(this).parent().next().show().next().hide()">
+                            <label for="defaultDate">预设</label>
+                            <!-- .find('select.defaultDate').prop('required',true) .find('select.defaultDate').removeProp('required') -->
+                            <input type="radio" id="manualDate" class="radio" name="dateRange" value="manual" onclick="$(this).parent().next().hide().next().show()">
+                            <label for="manualDate">手选</label>
+                        </div>
+                        <!-- 预设范围 选择 -->
+                        <div class="attribution-component range-default-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">预设范围</span>
+                            </div>
+                            <select name="" id="" class="defaultDate">
+                                <option value="unlimited">不限</option>
+                                <option value="from-tomorrow">第二天起</option>
+                                <option value="as-of-today">截至今天</option>
+                                <option value="of-one-month">前一个月内</option>
+                                <option value="in-one-month">后一个月内</option>
+                                <!-- <option value="in-one-month">前后一个月内</option> -->
+                            </select>
+                        </div>
+                        <!-- 手动范围 选择 -->
+                        <div class="attribution-component range-manual-component">
+                            <div class="right-title">
+                                <span class="span-required"></span>
+                                <span class="span-text">手动选择</span>
+                            </div>
+                            <input class="Wdate start-date" type="text" id="start" name="" onclick="WdatePicker({readOnly:true,maxDate:'#F{$dp.$D(\'end\')}'})">
+                            <input class="Wdate end-date" type="text" id="end" name="" onclick="WdatePicker({readOnly:true,minDate:'#F{$dp.$D(\'start\')}'})">
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">取值类型</span>
+                            </div>
+                            <input type="radio" id="readOnly-date" class="radio" name="readOnly" value="false" checked
+                                onclick="$(this).parent().next().hide().find('select.url-date').removeProp('required')">
+                            <label for="readOnly-date">输入</label>
+                            <input type="radio" id="isReadOnly-date" class="radio" name="readOnly" value="true" onclick="$(this).parent().next().show().find('select.url-date').prop('required',true)">
+                            <label for="isReadOnly-date">只读</label>
+                        </div>
+                        <div class="attribution-component url-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">url</span>
+                            </div>
+                            <select name="" id="" class="url-date" required>
+                                <option value="">-- 请选择 --</option>
+                                <option value="./data/a.json">A地址</option>
+                                <option value="./data/b.json">B地址</option>
+                                <!-- <option value="./data/c.json">C地址</option>
+                                <option value="./data/d.json">D地址</option>
+                                <option value="./data/e.json">E地址</option> -->
+                            </select>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">必填</span>
+                            </div>
+                            <input type="radio" id="required-date" class="radio" name="required" value="true" checked
+                                required>
+                            <label for="required-date">必填</label>
+                            <input type="radio" id="isrequired-date" class="radio" name="required" value="false"
+                                required>
+                            <label for="isrequired-date">非必填</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="resetAttribution('date')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('date')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-table">
+                    <div class="title">表格属性</div>
+                    <form action="" onsubmit="return saveAttribution('table')">
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">新增</span>
+                            </div>
+                            <input type="radio" id="hasAdd" class="radio" name="hasAdd" value="true" required checked>
+                            <label for="hasAdd">有</label>
+                            <input type="radio" id="hasNoAdd" class="radio" name="hasAdd" value="false" required>
+                            <label for="hasNoAdd">无</label>
+                        </div>
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">选择</span>
+                            </div>
+                            <input type="radio" id="hasCheck" class="radio" name="hasCheck" value="true" required checked>
+                            <label for="hasCheck">有</label>
+                            <input type="radio" id="hasNoCheck" class="radio" name="hasCheck" value="false" required>
+                            <label for="hasNoCheck">无</label>
+                        </div>
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">备注</span>
+                            </div>
+                            <input type="radio" id="hasRemarks" class="radio" name="hasRemarks" value="true" required checked>
+                            <label for="hasRemarks">有</label>
+                            <input type="radio" id="hasNoRemarks" class="radio" name="hasRemarks" value="false" required>
+                            <label for="hasNoRemarks">无</label>
+                        </div>
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">操作</span>
+                            </div>
+                            <!-- .find('input[name=operate]').prop('required',true) .removeProp('required') -->
+                            <input type="radio" id="hasOperate" class="radio" name="hasOperate" value="true" required
+                                checked onclick="$(this).parent().next().show()">
+                            <label for="hasOperate">有</label>
+                            <input type="radio" id="hasNoOperate" class="radio" name="hasOperate" value="false" required
+                                onclick="$(this).parent().next().hide()">
+                            <label for="hasNoOperate">无</label>
+                        </div>
+
+                        <div class="attribution-component operate-type">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">操作类型</span>
+                            </div>
+                            <input type="checkbox" id="operateDelete" class="checkbox" name="operate" value="delete" checked>
+                            <label for="operateDelete">删除</label>
+                            <input type="checkbox" id="operateEdit" class="checkbox" name="operate" value="edit">
+                            <label for="operateEdit">编辑</label>
+                            <input type="checkbox" id="operateSave" class="checkbox" name="operate" value="save">
+                            <label for="operateSave">保存</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="addColumn()">新增列</button>
+                            <button type="button" class="reset" onclick="resetAttribution('table')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('table')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-column">
+                    <div class="title">表格-列属性</div>
+                    <form action="" onsubmit="return saveAttribution('column')">
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">列名</span>
+                            </div>
+                            <input type="text" class="column-text" required maxlength="4">
+                        </div>
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">是否合计</span>
+                            </div>
+                            <!-- .find('input[name=operate]').prop('required',true) .removeProp('required') -->
+                            <input type="radio" id="hasCount" class="radio" name="hasCount" value="true" required>
+                            <label for="hasCount">有</label>
+                            <input type="radio" id="hasNoCount" class="radio" name="hasCount" value="false" required checked>
+                            <label for="hasNoCount">无</label>
+                        </div>
+
+                        <div class="right-foot">
+                            <button type="button" class="reset" onclick="addColumn()">新增列</button>
+                            <button type="button" class="reset" onclick="resetAttribution('column')">重置</button>
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deletColumn()">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="right-component right-button-submit">
+                    <div class="title">页面提交地址</div>
+                    <form action="" onsubmit="return saveAttribution('submit')">
+                        <div class="attribution-component">
+
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">提交地址</span>
+                            </div>
+                            <input type="text" class="text" required>
+                        </div>
+
+                        <div class="right-foot">
+                            <!-- <button type="button" class="reset" onclick="resetAttribution('table')">重置</button> -->
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <!-- <button type="button" class="delete" onclick="deleteAttribution('table')">删除</button> -->
+                            <button type="submit" class="save">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-component right-adress">
+                    <div class="title">地址栏属性</div>
+                    <form action="" onsubmit="return saveAttribution('adress')">
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="5">
+                        </div>
+
+                        <div class="right-foot">
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('adress')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="right-component right-time-range">
+                    <div class="title">时间范围属性</div>
+                    <form action="" onsubmit="return saveAttribution('time-range')">
+
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="text" required maxlength="5">
+                        </div>
+
+                        <div class="right-foot">
+                            <!-- <button type="reset" class="clear">清空</button> -->
+                            <button type="button" class="delete" onclick="deleteAttribution('time-range')">删除</button>
+                            <button type="submit" class="save">保存</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot"></div>
+
+    <!-- 模板区域 templates -->
+    <div class="dialog-templates dialog">
+        <div class="dialog-body">
+            <div class="title">
+                模板库
+                <div class="close-dialog" onclick="closeDialog()">×</div>
+            </div>
+            <div class="dialog-main">
+
+                <!-- 空白区域 area-default -->
+                <div class="form-area area-default">
+                    <div class="form-area-head" draggable="true" ondragstart="dragStart(event, this, 'move', 'area')"
+                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','area')">
+                        <span class="area-title">区域标题</span>
+                        <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+                        <div class="area-tool">
+                            <button class="edit" onclick="openAttr(event)">编辑区域标题</button>
+                            <button class="clear" onclick="clearArea(event)">清空</button>
+                            <button class="delete" onclick="deleteArea(event)">删除</button>
+                        </div>
+                    </div>
+                    <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+                    </div>
+                </div>
+
+                <!-- 新增报案 area-xzba -->
+                <div class="form-area area-xzba">
+                    <div class="form-area-head" draggable="true" ondragstart="dragStart(event, this, 'move', 'area')"
+                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','area')">
+                        <span class="area-title">新增报案</span>
+                        <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+                        <div class="area-tool">
+                            <button class="edit" onclick="openAttr(event)">编辑区域标题</button>
+                            <button class="clear" onclick="clearArea(event)">清空</button>
+                            <button class="delete" onclick="deleteArea(event)">删除</button>
+                        </div>
+                    </div>
+                    <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+                        <div class="form-component component-input" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">保单号</span>
+                            </div>
+                            <input type="text" name="" id="" placeholder="请输入保单号" required>
+                        </div>
+
+                        <div class="form-component component-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                            <select name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                                <option value="">选项一</option>
+                                <option value="">选项二</option>
+                                <option value="">选项三</option>
+                            </select>
+                        </div>
+                        <div class="form-component component-input" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">出险日期</span>
+                            </div>
+                            <input type="text" name="" id="" placeholder="请输入出险日期" required>
+                        </div>
+                        <div class="form-component component-input" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">联系电话</span>
+                            </div>
+                            <input type="text" name="" id="" placeholder="请输入联系电话" required>
+                        </div>
+                        <div class="form-component component-double-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">出险原因</span>
+                            </div>
+                            <select name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                                <option value="1">意外事故</option>
+                            </select>
+                            <select class="second-select" name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                                <option value="1">燃气泄漏</option>
+                            </select>
+                        </div>
+                        <div class="form-component component-adress" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">地址</span>
+                            </div>
+                            <div class="distpicker" data-toggle="distpicker">
+                                <select name="" id="" required></select>
+                                <select class="second-select" name="" id="" required></select>
+                                <select class="second-select" name="" id="" required></select>
+                            </div>
+                            <input type="text" name="" id="" placeholder="请填写详细地址" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 示例区域 area-demos -->
+                <div class="form-area area-demos">
+                    <div class="form-area-head" draggable="true" ondragstart="dragStart(event, this, 'move', 'area')"
+                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','area')">
+                        <span class="area-title">示例区域</span>
+                        <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+                        <div class="area-tool">
+                            <button class="edit" onclick="openAttr(event)">编辑区域标题</button>
+                            <button class="clear" onclick="clearArea(event)">清空</button>
+                            <button class="delete" onclick="deleteArea(event)">删除</button>
+                        </div>
+                    </div>
+                    <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+
+                        <div class="form-component component-input" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" name="" id="" placeholder="输入框" required>
+                        </div>
+
+                        <div class="form-component component-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <!-- <input type="text" name="" id="" placeholder="输入框" required> -->
+                            <select name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                                <option value="">选项一</option>
+                                <option value="">选项二</option>
+                                <option value="">选项三</option>
+                            </select>
+                        </div>
+
+                        <div class="form-component component-multi-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <select name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                            </select>
+                            <select class="second-select" name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-component component-radio" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <div class="radio-box">
+                                <input type="radio" name="" class="radio" id="" value="" required checked>
+                                <label for="">选项A</label>
+                            </div>
+                            <div class="radio-box">
+                                <input type="radio" name="" class="radio" id="" value="" required>
+                                <label for="">选项B</label>
+                            </div>
+                        </div>
+
+                        <div class="form-component component-checkbox" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <div class="checkbox-box">
+                                <input type="checkbox" name="" class="checkbox" id="" value="" required
+                                    checked>
+                                <label for="">选项A</label>
+                            </div>
+                            <div class="checkbox-box">
+                                <input type="checkbox" name="" class="checkbox" id="" value="" required>
+                                <label for="">选项B</label>
+                            </div>
+                            <div class="checkbox-box">
+                                <input type="checkbox" name="" class="checkbox" id="" value="" required>
+                                <label for="">选项C</label>
+                            </div>
+                        </div>
+
+                        <div class="form-component component-textarea" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <textarea placeholder="多行文本" name="" id="" rows="5" maxlength="1000" required></textarea>
+                        </div>
+
+                        <div class="form-component component-date" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">日期</span>
+                            </div>
+                            <input class="Wdate" type="text" id="" name="" onclick='WdatePicker({"readOnly":true})'
+                             required>
+                        </div>
+
+                        <div class="form-component component-table" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="table-special table-check">
+                                        <!-- 选择  -->
+                                        <input type="checkbox" name="" class="checkbox check-all" id="" value="">
+                                    </th>
+                                    <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列二</th>
+                                    <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列三</th>
+                                    <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列四</th>
+                                    <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列五</th>
+                                    <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列六</th>
+                                    <th class="table-special table-remarks">备注</th>
+                                    <th class="table-special table-operation">操作</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" class="checkbox" id="" value="" checked>
+                                    </td>
+                                    <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                                        <div class="form-component component-input">
+                                            <input type="text" name="" id="" placeholder="输入框" required>
+                                        </div>
+                                    </td>
+                                    <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                                        <div class="form-component component-input">
+                                            <input type="text" name="" id="" placeholder="输入框" required>
+                                        </div>
+                                    </td>
+                                    <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                                        <div class="form-component component-input">
+                                            <input type="text" name="" id="" placeholder="输入框" required>
+                                        </div>
+                                    </td>
+                                    <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                                        <div class="form-component component-input">
+                                            <input type="text" name="" id="" placeholder="输入框" required>
+                                        </div>
+                                    </td>
+                                    <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                                        <div class="form-component component-input">
+                                            <input type="text" name="" id="" placeholder="输入框" required>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="" placeholder="备注">
+                                    </td>
+                                    <td>
+                                        <button type="button" class="delete-row" onclick="deleteRow(event)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr class="last-empty-tr">
+                                    <!-- <td class="table-check-all">
+                                        <button type="button" class="check-all" onclick="checkAll(event)">全选</button>
+                                    </td> -->
+                                    <td class="table-special  table-add-row">
+                                        <button type="button" class="add-row">新增</button>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div>
+                                点击/拖拽
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 测试区域 area-test -->
+                <div class="form-area area-test">
+                    <div class="form-area-head" draggable="true" ondragstart="dragStart(event, this, 'move', 'area')"
+                        ondragover="dragOver(event)" ondrop="drop(event,this,'move','area')">
+                        <span class="area-title">测试区域</span>
+                        <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+                        <div class="area-tool">
+                            <button class="edit" onclick="openAttr(event)">编辑区域标题</button>
+                            <button class="clear" onclick="clearArea(event)">清空</button>
+                            <button class="delete" onclick="deleteArea(event)">删除</button>
+                        </div>
+                    </div>
+                    <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+
+                        <div class="form-component component-adress" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">地址</span>
+                            </div>
+                            <div class="distpicker" data-toggle="distpicker">
+                                <select name="" id="" required></select>
+                                <select class="second-select" name="" id="" required></select>
+                                <select class="second-select" name="" id="" required></select>
+                            </div>
+                            <input type="text" name="" id="" placeholder="请填写详细地址" required>
+                        </div>
+        
+                        <div class="form-component component-time-range" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">时间范围</span>
+                            </div>
+                            <input class="Wdate start-date" type="text" id="start-1" name="" onclick="WdatePicker({readOnly:true,maxDate:'#F{$dp.$D(\'end-1\')}'})">
+                            <input class="Wdate end-date" type="text" id="end-1" name="" onclick="WdatePicker({readOnly:true,minDate:'#F{$dp.$D(\'start-1\')}'})">
+                        </div>
+
+                        <div class="form-component component-multi-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                            <div class="input-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <select name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                            </select>
+                            <select class="second-select" name="" id="" required>
+                                <option value="" selected>-- 请选择 --</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 组件区域 components -->
+    <div class="dialog-components dialog">
+        <div class="components">
+            <div class="form-component component-input" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">字段</span>
+                </div>
+                <input type="text" name="" id="" placeholder="输入框" required>
+            </div>
+
+            <div class="form-component component-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">字段</span>
+                </div>
+                <!-- <input type="text" name="" id="" placeholder="输入框" required> -->
+                <select name="" id="" required>
+                    <option value="" selected>-- 请选择 --</option>
+                    <option value="">选项一</option>
+                    <option value="">选项二</option>
+                    <option value="">选项三</option>
+                </select>
+            </div>
+
+            <div class="option component-option" onclick="editOption(event)">
+                <div class="option-delete" onclick="deleteOption(event)">×</div>
+                <div class="option-title"></div>
+                <div class="option-selected" onclick="selectedOption(event)">√</div>
+            </div>
+
+            <div class="container component-option-container">
+
+                <div class="option" onclick="editOption(event)">
+                    <div class="option-delete" onclick="deleteOption(event)">×</div>
+                    <div class="option-title">-- 请选择 --</div>
+                    <div class="option-selected option-selected-default" onclick="selectedOption(event)">√</div>
+                </div>
+                <!-- <div class="option" onclick="editOption(event)">
+                    <div class="option-delete" onclick="deleteOption(event)">×</div>
+                    <div class="option-title">选项一</div>
+                    <div class="option-selected" onclick="selectedOption(event)">√</div>
+                </div>
+                <div class="option" onclick="editOption(event)">
+                    <div class="option-delete" onclick="deleteOption(event)">×</div>
+                    <div class="option-title">选项二</div>
+                    <div class="option-selected" onclick="selectedOption(event)">√</div>
+                </div>
+                <div class="option" onclick="editOption(event)">
+                    <div class="option-delete" onclick="deleteOption(event)">×</div>
+                    <div class="option-title">选项三</div>
+                    <div class="option-selected" onclick="selectedOption(event)">√</div>
+                </div> -->
+
+            </div>
+
+            <div class="form-component component-multi-select" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">字段</span>
+                </div>
+                <select name="" id="" required>
+                    <option value="" selected>-- 请选择 --</option>
+                </select>
+                <select class="second-select" name="" id="" required>
+                    <option value="" selected>-- 请选择 --</option>
+                </select>
+            </div>
+
+            <!-- no use -->
+            <div class="one-select">
+                <div class="edit-this-select">
+                    <div class="select-name">num</div>
+                    <!-- <div class="delete-select" onclick="delMultiSelect(event)">×</div> -->
+                </div>
+                <div class="container" id="" onclick="activeOption(event)">
+
+                    <div class="option" onclick="editOption(event)">
+                        <div class="option-delete" onclick="deleteOption(event)">×</div>
+                        <div class="option-title">-- 请选择 --</div>
+                        <div class="option-selected option-selected-default" onclick="selectedOption(event)">√</div>
+                    </div>
+                    <div class="option" onclick="editOption(event)">
+                        <div class="option-delete" onclick="deleteOption(event)">×</div>
+                        <div class="option-title"></div>
+                        <div class="option-selected" onclick="selectedOption(event)">√</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="option component-multi-option" onclick="editMulti(event)" id="">
+                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                <div class="option-title"></div>
+                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+            </div>
+
+            <div class="form-component component-radio" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">字段</span>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" name="" class="radio" id="" value="" required checked>
+                    <label for="">选项A</label>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" name="" class="radio" id="" value="" required>
+                    <label for="">选项B</label>
+                </div>
+            </div>
+
+            <div class="option component-radio-default" onclick="editRadio(event)">
+                <div class="option-delete" onclick="deleteRadio(event)">×</div>
+                <div class="option-title"></div>
+                <div class="option-selected" onclick="selectRadio(event)">√</div>
+            </div>
+
+            <div class="container component-radio-container">
+
+                <div class="option" onclick="editRadio(event)">
+                    <div class="option-delete" onclick="deleteRadio(event)">×</div>
+                    <div class="option-title">选项A</div>
+                    <div class="option-selected" onclick="selectRadio(event)">√</div>
+                </div>
+
+                <div class="option" onclick="editRadio(event)">
+                    <div class="option-delete" onclick="deleteRadio(event)">×</div>
+                    <div class="option-title">选项B</div>
+                    <div class="option-selected" onclick="selectRadio(event)">√</div>
+                </div>
+
+            </div>
+
+            <div class="form-component component-checkbox" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">字段</span>
+                </div>
+                <div class="checkbox-box">
+                    <input type="checkbox" name="" class="checkbox" id="" value="" required checked>
+                    <label for="">选项A</label>
+                </div>
+                <div class="checkbox-box">
+                    <input type="checkbox" name="" class="checkbox" id="" value="" required>
+                    <label for="">选项B</label>
+                </div>
+                <div class="checkbox-box">
+                    <input type="checkbox" name="" class="checkbox" id="" value="" required>
+                    <label for="">选项C</label>
+                </div>
+            </div>
+
+            <div class="option component-checkbox-default" onclick="editCheckbox(event)">
+                <div class="option-delete" onclick="deleteCheckbox(event)">×</div>
+                <div class="option-title"></div>
+                <div class="option-selected" onclick="selectCheckbox(event)">√</div>
+            </div>
+
+            <div class="container component-checkbox-container">
+
+                <div class="option" onclick="editCheckbox(event)">
+                    <div class="option-delete" onclick="deleteCheckbox(event)">×</div>
+                    <div class="option-title">选项A</div>
+                    <div class="option-selected" onclick="selectCheckbox(event)">√</div>
+                </div>
+
+                <div class="option" onclick="editCheckbox(event)">
+                    <div class="option-delete" onclick="deleteCheckbox(event)">×</div>
+                    <div class="option-title">选项B</div>
+                    <div class="option-selected" onclick="selectCheckbox(event)">√</div>
+                </div>
+
+            </div>
+
+            <div class="form-component component-textarea" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">字段</span>
+                </div>
+                <textarea placeholder="多行文本" name="" id="" rows="5" maxlength="1000" required></textarea>
+            </div>
+
+            <div class="form-component component-date" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">日期</span>
+                </div>
+                <input class="Wdate" type="text" id="" name="" onclick='WdatePicker({"readOnly":true})'
+                    required>
+            </div>
+
+            <div class="form-component component-table" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th class="table-special table-check">
+                            <!-- 选择  -->
+                            <input type="checkbox" name="" class="checkbox check-all" id="" value="">
+                        </th>
+                        <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列二</th>
+                        <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列三</th>
+                        <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列四</th>
+                        <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列五</th>
+                        <th onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                            ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列六</th>
+                        <th class="table-special table-remarks">备注</th>
+                        <th class="table-special table-operation">操作</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" class="checkbox" id="" value="" checked>
+                        </td>
+                        <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                            <div class="form-component component-input">
+                                <input type="text" name="" id="" placeholder="输入框" required>
+                            </div>
+                        </td>
+                        <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                            <div class="form-component component-input">
+                                <input type="text" name="" id="" placeholder="输入框" required>
+                            </div>
+                        </td>
+                        <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                            <div class="form-component component-input">
+                                <input type="text" name="" id="" placeholder="输入框" required>
+                            </div>
+                        </td>
+                        <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                            <div class="form-component component-input">
+                                <input type="text" name="" id="" placeholder="输入框" required>
+                            </div>
+                        </td>
+                        <td ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                            <div class="form-component component-input">
+                                <input type="text" name="" id="" placeholder="输入框" required>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="" placeholder="备注">
+                        </td>
+                        <td>
+                            <button type="button" class="delete-row" onclick="deleteRow(event)">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="last-empty-tr">
+                        <!-- <td class="table-check-all">
+                            <button type="button" class="check-all" onclick="checkAll(event)">全选</button>
+                        </td> -->
+                        <td class="table-special  table-add-row">
+                            <button type="button" class="add-row">新增</button>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div>
+                    点击/拖拽
+                </div>
+            </div>
+
+            <table class="table-default">
+                <th class="th-default" onclick="editColumn(event)" draggable="true" ondragstart="dragStart(event, this, 'move', 'th')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','th')">列</th>
+                
+                <td class="td-default" ondragover="dragOver(event)" ondrop="drop(event,this,'move','td')">
+                    <div class="form-component component-input">
+                        <input type="text" name="" id="" placeholder="输入框" required>
+                    </div>
+                </td>
+            </table>
+
+            <div class="form-component component-adress" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">地址</span>
+                </div>
+                <div class="distpicker" data-toggle="distpicker">
+                    <select name="" id="" required></select>
+                    <select class="second-select" name="" id="" required></select>
+                    <select class="second-select" name="" id="" required></select>
+                </div>
+                <input type="text" name="" id="" placeholder="请填写详细地址" required>
+            </div>
+
+            <div class="form-component component-time-range" draggable="true" ondragstart="dragStart(event, this, 'move', 'component')"
+                ondragover="dragOver(event)" ondrop="drop(event,this,'move','component')">
+                <div class="input-title">
+                    <span class="span-required">*</span>
+                    <span class="span-text">时间范围</span>
+                </div>
+                <input class="Wdate start-date" type="text" id="start-1" name="" onclick="WdatePicker({readOnly:true,maxDate:'#F{$dp.$D(\'end-1\')}'})">
+                <input class="Wdate end-date" type="text" id="end-1" name="" onclick="WdatePicker({readOnly:true,minDate:'#F{$dp.$D(\'start-1\')}'})">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 下拉选项编辑 options -->
+    <div class="dialog-select-edit dialog">
+        <div class="dialog-body">
+            <div class="title">
+                列表选项编辑
+                <div class="close-dialog" onclick="closeDialog()">×</div>
+            </div>
+            <div class="dialog-main">
+                <div class="container" id="option-container" onclick="activeOption(event)">
+
+                    <div class="option" onclick="editOption(event)">
+                        <div class="option-delete" onclick="deleteOption(event)">×</div>
+                        <div class="option-title">-- 请选择 --</div>
+                        <div class="option-selected option-selected-default" onclick="selectedOption(event)">√</div>
+                    </div>
+                    <div class="option" onclick="editOption(event)">
+                        <div class="option-delete" onclick="deleteOption(event)">×</div>
+                        <div class="option-title">选项一</div>
+                        <div class="option-selected" onclick="selectedOption(event)">√</div>
+                    </div>
+                    <div class="option" onclick="editOption(event)">
+                        <div class="option-delete" onclick="deleteOption(event)">×</div>
+                        <div class="option-title">选项二</div>
+                        <div class="option-selected" onclick="selectedOption(event)">√</div>
+                    </div>
+                    <div class="option" onclick="editOption(event)">
+                        <div class="option-delete" onclick="deleteOption(event)">×</div>
+                        <div class="option-title">选项三</div>
+                        <div class="option-selected" onclick="selectedOption(event)">√</div>
+                    </div>
+
+                </div>
+
+                <div class="option-edit">
+                    <form action="" onsubmit="return saveOption()">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">label</span>
+                            </div>
+                            <input type="text" class="label" required>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">value</span>
+                            </div>
+                            <input type="text" class="value" required>
+                        </div>
+
+                        <button type="button" onclick="addOption()">新增</button>
+                        <button class="save">保存</button>
+                    </form>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-button save" onclick="completeOptions()">完成</button>
+                <button class="dialog-button" onclick="closeDialog()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 多级下拉选项编辑 options -->
+    <div class="dialog-multi-select-edit dialog">
+        <div class="dialog-body">
+            <div class="title">
+                多级下拉选项编辑
+                <div class="close-dialog" onclick="closeDialog()">×</div>
+            </div>
+            <div class="dialog-main">
+
+                <div class="edit-title">下拉框个数</div>
+                <div class="edit-selects">
+                    <select name="" id="" class="select-num" onchange="changeSelectNum()">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <!-- <div class="edit-selects-button">
+                        <button class="add-select" onclick="addMultiSelect()">增加</button>
+                    </div> -->
+                </div>
+
+                <div class="edit-title">选项编辑</div>
+                <div class="edit-options">
+                    <div class="one-select">
+                        <div class="edit-this-select">
+                            <div class="select-name" onclick="activeContainer(event)">1</div>
+                            <!-- <div class="delete-select" onclick="delMultiSelect(event)">×</div> -->
+                        </div>
+                        <div class="container" id="option-container-1">
+
+                            <!-- <div class="option" onclick="editMulti(event)" id="order-0">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">-- 请选择 --</div>
+                                <div class="option-selected option-selected-default" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <div class="one-select">
+                        <div class="edit-this-select">
+                            <div class="select-name" onclick="activeContainer(event)">2</div>
+                            <!-- <div class="delete-select" onclick="delMultiSelect(event)">×</div> -->
+                        </div>
+                        <div class="container" id="option-container-2">
+
+                            <!-- <div class="option" onclick="editMulti(event)" id="order-0-0">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">-- 请选择 --</div>
+                                <div class="option-selected option-selected-default" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <!-- 默认2个select -->
+                    <div class="one-select" style="display:none;">
+                        <div class="edit-this-select">
+                            <div class="select-name" onclick="activeContainer(event)">3</div>
+                            <!-- <div class="delete-select" onclick="delMultiSelect(event)">×</div> -->
+                        </div>
+                        <div class="container" id="option-container-3">
+
+                            <!-- <div class="option" onclick="editMulti(event)" id="order-0-0-0">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">-- 请选择 --</div>
+                                <div class="option-selected option-selected-default" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <div class="one-select" style="display:none;">
+                        <div class="edit-this-select">
+                            <div class="select-name" onclick="activeContainer(event)">4</div>
+                            <!-- <div class="delete-select" onclick="delMultiSelect(event)">×</div> -->
+                        </div>
+                        <div class="container" id="option-container-4">
+
+                            <!-- <div class="option" onclick="editMulti(event)" id="order-0-0-0-0">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">-- 请选择 --</div>
+                                <div class="option-selected option-selected-default" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <div class="one-select" style="display:none;">
+                        <div class="edit-this-select">
+                            <div class="select-name" onclick="activeContainer(event)">5</div>
+                            <!-- <div class="delete-select" onclick="delMultiSelect(event)">×</div> -->
+                        </div>
+                        <div class="container" id="option-container-5">
+
+                            <!-- <div class="option" onclick="editMulti(event)" id="order-0-0-0-0-0">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">-- 请选择 --</div>
+                                <div class="option-selected option-selected-default" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-1-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-1-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-1-2-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-1-2-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-1-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-1-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2-1-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2-1-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2-1-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2-1-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2-2-1">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2-2-1</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div>
+                            <div class="option" onclick="editMulti(event)" id="order-1-2-2-2-2">
+                                <div class="option-delete" onclick="deleteMulti(event)">×</div>
+                                <div class="option-title">1-2-2-2-2</div>
+                                <div class="option-selected" onclick="selecteMulti(event)">√</div>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="option-edit">
+                        <form action="" onsubmit="return saveMulti()">
+                            <div class="attribution-component">
+                                <div class="right-title">
+                                    <span class="span-required">*</span>
+                                    <span class="span-text">label</span>
+                                </div>
+                                <input type="text" class="label" required>
+                            </div>
+                            <div class="attribution-component">
+                                <div class="right-title">
+                                    <span class="span-required">*</span>
+                                    <span class="span-text">value</span>
+                                </div>
+                                <input type="text" class="value" required>
+                            </div>
+
+                            <button type="button" onclick="addMulti()">新增</button>
+                            <button class="save">保存</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-button save" onclick="completeMultis()">完成</button>
+                <button class="dialog-button" onclick="closeDialog()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 单选选项编辑 radio -->
+    <div class="dialog-radio-edit dialog">
+        <div class="dialog-body">
+            <div class="title">
+                单选选项编辑
+                <div class="close-dialog" onclick="closeDialog()">×</div>
+            </div>
+            <div class="dialog-main">
+                <div class="container" id="radio-container" onclick="activeRadio(event)">
+
+                    <div class="option" onclick="editRadio(event)">
+                        <div class="option-delete" onclick="deleteRadio(event)">×</div>
+                        <div class="option-title">选项A</div>
+                        <div class="option-selected option-selected-default" onclick="selectRadio(event)">√</div>
+                    </div>
+                    <div class="option" onclick="editRadio(event)">
+                        <div class="option-delete" onclick="deleteRadio(event)">×</div>
+                        <div class="option-title">选项B</div>
+                        <div class="option-selected" onclick="selectRadio(event)">√</div>
+                    </div>
+
+                </div>
+
+                <div class="option-edit">
+                    <form action="" onsubmit="return saveRadio()">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="label" required>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">value</span>
+                            </div>
+                            <input type="text" class="value" required>
+                        </div>
+
+                        <button type="button" onclick="addRadio()">新增</button>
+                        <button class="save">保存</button>
+                    </form>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-button save" onclick="completeRadio()">完成</button>
+                <button class="dialog-button" onclick="closeDialog()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 多项选项编辑 checkbox -->
+    <div class="dialog-checkbox-edit dialog">
+        <div class="dialog-body">
+            <div class="title">
+                多项选项编辑
+                <div class="close-dialog" onclick="closeDialog()">×</div>
+            </div>
+            <div class="dialog-main">
+
+                <div class="container" id="checkbox-container" onclick="activeCheckbox(event)">
+
+                    <div class="option" onclick="editCheckbox(event)">
+                        <div class="option-delete" onclick="deleteCheckbox(event)">×</div>
+                        <div class="option-title">选项A</div>
+                        <div class="option-selected option-selected-default" onclick="selectCheckbox(event)">√</div>
+                    </div>
+                    <div class="option" onclick="editCheckbox(event)">
+                        <div class="option-delete" onclick="deleteCheckbox(event)">×</div>
+                        <div class="option-title">选项B</div>
+                        <div class="option-selected" onclick="selectCheckbox(event)">√</div>
+                    </div>
+
+                </div>
+
+                <div class="option-edit">
+                    <form action="" onsubmit="return saveCheckbox()">
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">字段</span>
+                            </div>
+                            <input type="text" class="label" required>
+                        </div>
+                        <div class="attribution-component">
+                            <div class="right-title">
+                                <span class="span-required">*</span>
+                                <span class="span-text">value</span>
+                            </div>
+                            <input type="text" class="value" required>
+                        </div>
+
+                        <button type="button" onclick="addCheckbox()">新增</button>
+                        <button class="save">保存</button>
+                    </form>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-button save" onclick="completeCheckbox()">完成</button>
+                <button class="dialog-button" onclick="closeDialog()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 列表编辑 checkbox -->
+    <div class="dialog-table-edit dialog">
+        <div class="dialog-body">
+            <div class="title">
+                列表编辑
+                <div class="close-dialog" onclick="closeDialog()">×</div>
+            </div>
+            <div class="dialog-main">
+
+            </div>
+            <div class="dialog-footer">
+                <button class="dialog-button save" onclick="completeCheckbox()">完成</button>
+                <button class="dialog-button" onclick="closeDialog()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <!-- 日期 -->
+    <script src="./form/lib/My97DatePicker/WdatePicker.js"></script>
+    <!-- 地区 -->
+    <script src="./form/lib/distpicker/dist/distpicker.data.min.js"></script>
+    <script src="./form/lib/distpicker/dist/distpicker.min.js"></script>
+    <!-- 拖拽插件 -->
+    <script src="./form/lib/draglua/draglua.min.js"></script>
+    <!-- 加密的js -->
+    <!-- <script src="./form/js/configurate-1.0.0.js"></script> -->
+    <!-- 通用 -->
+    <script src="./form/js/common.js"></script>
+
+    <script src="./form/js/main.js"></script>
+    <!-- 拖拽 -->
+    <script src="./form/js/drag.js"></script>
+    <!-- 各弹窗js -->
+    <script src="./form/js/dialog-option.js"></script>
+    <script src="./form/js/dialog-multi.js"></script>
+    <script src="./form/js/dialog-radio.js"></script>
+    <script src="./form/js/dialog-checkbox.js"></script>
+    <!-- <script src="./form/js/validate.js"></script> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>现场查勘</title>
+    <link rel="stylesheet" href="./form/css/page.css">
+</head>
+
+<body>
+
+    <div class="main" id="view-main" style="width:1052px;margin:0 auto;">
+        <form id="page" action="" onsubmit="return submitPage()">
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">查勘信息</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">客户姓名</span>
+                    </div>
+                    <input type="text" name="" id="" required value="自动带入，可编辑">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">联系电话</span>
+                    </div>
+                    <input type="text" name="" id="" required value="自动带入，可编辑">
+                </div>
+
+                <div class="form-component component-double-select">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">出险原因</span>
+                    </div>
+                    <select name="" id="" required>
+                        <option value="" selected>-- 请选择 --</option>
+                        <option value="1">意外事故</option>
+                    </select>
+                    <select class="second-select" name="" id="" required>
+                        <option value="" selected>-- 请选择 --</option>
+                        <option value="1">燃气泄漏</option>
+                    </select>
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">查勘地址</span>
+                    </div>
+                    <input type="text" name="" id="" required >
+                </div>
+
+                <div class="form-component component-date">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">查勘时间</span>
+                    </div>
+                    <input class="Wdate" type="text" id="" name="" onclick="WdatePicker({'readOnly':true})" required>
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">事故责任</span>
+                    </div>
+                    <input type="text" name="" id="" required >
+                </div>
+
+                <div class="form-component component-textarea">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">查勘经过</span>
+                    </div>
+                    <textarea placeholder="自动生成模板：（客户）（ 联系电话）于（出险时间）在（客户地址）因为（出险原因）发生了事故；可编辑" name="" id="" rows="4" maxlength="1000" required=""></textarea>
+                </div>
+
+                <div class="form-component component-textarea">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">查勘结论</span>
+                    </div>
+                    <textarea placeholder="输入" name="" id="" rows="4" maxlength="1000" required=""></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-area footer-button">
+            <div class="form-component button-submit">
+                <button class="submit">提交</button>
+            </div>
+            <!-- <div class="form-component button-submit">
+                <button class="submit">提交</button>
+            </div> -->
+        </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <script src="./form/lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="./form/js/common.js"></script>
+    <script src="./form/js/page.js"></script>
+</body>
+
+</html>

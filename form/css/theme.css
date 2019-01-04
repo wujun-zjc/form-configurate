@@ -1,0 +1,31 @@
+input,
+select {
+  height: 28px !important;
+  line-height: 28px !important;
+  border-radius: 0 !important;
+}
+input:required,
+textarea:required,
+select:required {
+  background-color: #abf9e7;
+}
+.form-area .form-area-head {
+  background-color: #E0ECFF !important;
+}
+.form-area .form-area-head .area-title {
+  color: #000 !important;
+}
+.input-title {
+  text-align: right !important;
+}
+.input-title .span-required {
+  display: none !important;
+}
+.input-title .span-text {
+  margin-right: 15px;
+}
+.form-component {
+  height: 32px !important;
+  line-height: 32px !important;
+  padding: 5px 15px !important;
+}

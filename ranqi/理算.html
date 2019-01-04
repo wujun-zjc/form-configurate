@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>理算</title>
+    <link rel="stylesheet" href="./form/css/page.css">
+</head>
+
+<body>
+
+    <div class="main" id="view-main" style="width:1052px;margin:0 auto;">
+        <form id="page" action="" onsubmit="return submitPage()">
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">保单信息</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">保单号</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="6172120180600000035">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">产品</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="民用燃气用户综合保险">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">产品类型</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="非水险">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">保额</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="3198">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">被保险人</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="王紫荆">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">投保人</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="劲螭消费金融有限公司">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">承保机构</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="渤海财产保险股份有限公司天津分公司">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">保险期限</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="2018-06-25 00:00:00 至 2019-06-25 00:00:00">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">出险次数</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">案件信息</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+
+                <div class="form-component component-date">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">出险时间</span>
+                    </div>
+                    <input class="Wdate" type="text" id="" name="" onclick="WdatePicker({'readOnly':true})" value="2018-11-6 09:30:11" disabled>
+                </div>
+
+                <div class="form-component component-date">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">报案时间</span>
+                    </div>
+                    <input class="Wdate" type="text" id="" name="" onclick="WdatePicker({'readOnly':true})" value="2018-11-6 09:30:11" disabled>
+                </div>
+
+                <div class="form-component component-date">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">查勘时间</span>
+                    </div>
+                    <input class="Wdate" type="text" id="" name="" onclick="WdatePicker({'readOnly':true})" value="2018-11-6 09:30:11" disabled>
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">客户姓名</span>
+                    </div>
+                    <input type="text" name="" id="" value="尹罡" disabled>
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">联系电话</span>
+                    </div>
+                    <input type="text" name="" id="" value="13333333333" disabled>
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">赔案号</span>
+                    </div>
+                    <input type="text" name="" id="" value="24306010302012000002" disabled>
+                </div>
+
+                <div class="form-component component-double-select">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">出险原因</span>
+                    </div>
+                    <select name="" id="" required>
+                        <option value="" selected>-- 请选择 --</option>
+                        <option value="1">意外事故</option>
+                    </select>
+                    <select class="second-select" name="" id="" required>
+                        <option value="" selected>-- 请选择 --</option>
+                        <option value="1">燃气泄漏</option>
+                    </select>
+                </div>
+                
+                <div class="form-component component-input">
+                    <div class="input-title">
+
+                        <span class="span-required"></span>
+                        <span class="span-text">责任比例</span>
+                    </div>
+                    <input type="text" name="" id="" value="100%" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">燃气保险</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+                <div class="form-component component-table">
+                    <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th>险别</th>
+                                <th>保额</th>
+                                <th>已赔付金额</th>
+                                <th>应付金额</th>
+                                <th>理算金额</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required value="">
+
+                                </td>
+
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required value="">
+
+                                </td>
+
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">家庭财产保险</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+                <div class="form-component component-table">
+                    <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th>险别</th>
+                                <th>保额</th>
+                                <th>已赔付金额</th>
+                                <th>应付金额</th>
+                                <th>理算金额</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required value="">
+
+                                </td>
+
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required value="">
+
+                                </td>
+
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">费用明细</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+                <div class="form-component component-table">
+                    <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th>费用类型</th>
+                                <th>金额</th>
+                                <th>备注</th>
+                                <th>操作人</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" disabled value="自动带出，不可编辑">
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required disabled value="保存后写入登录用户，不可编辑">
+
+                                </td>
+
+                                <td>
+                                    <button type="button" class="delete-row" class="delete-row" onclick="deleteRow(event)">删除</button>
+                                    <button type="button">保存</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="add-row">新增任务</button>
+                                </td>
+                                <td>合计</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">收款人明细</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+                <div class="form-component component-table">
+                    <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th>费用类型</th>
+                                <th>收款账号</th>
+                                <th>收款人姓名</th>
+                                <th>收款金额</th>
+                                <th>备注</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="" id="" required>
+                                        <option value="" selected> - 请选择 - </option>
+                                        <option value="">劲螭报案</option>
+                                        <option value="">400报案</option>
+                                        <option value="">捷信报案</option>
+                                        <option value="">微信报案</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required>
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required>
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="" required>
+                                </td>
+
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+
+                                <td>
+                                    <button type="button" class="delete-row" class="delete-row" onclick="deleteRow(event)">删除</button>
+                                    <button type="button">保存</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="add-row">新增任务</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>合计</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area area-demos">
+            <div class="form-area-head">
+                <span class="area-title">理算意见</span>
+                <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+            </div>
+            <div class="form-area-main" ondragover="dragOver(event)" ondrop="drop(event,this,'move','area-main')">
+
+                <div class="form-component component-radio form-component-two">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">理算结果</span>
+                    </div>
+                    <div class="radio-box">
+                        <input type="radio" name="" class="radio" id="" value="" required="" checked="">
+                        <label for="">赔付</label>
+                    </div>
+                    <div class="radio-box">
+                        <input type="radio" name="" class="radio" id="" value="" required="">
+                        <label for="">拒赔</label>
+                    </div>
+                    <div class="radio-box">
+                        <input type="radio" name="" class="radio" id="" value="" required="">
+                        <label for="">定损修改</label>
+                    </div>
+                    <div class="radio-box">
+                        <input type="radio" name="" class="radio" id="" value="" required="">
+                        <label for="">查勘修改</label>
+                    </div>
+                </div>
+
+                <div class="form-component component-textarea">
+                    <div class="input-title">
+                        <span class="span-required">*</span>
+                        <span class="span-text">理算意见</span>
+                    </div>
+                    <textarea placeholder="输入" name="" id="" rows="4" maxlength="1000" required></textarea>
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">理算人</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="尹罡">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">理算时间</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="2018-11-6 09:42:22">
+                </div>
+
+                <div class="form-component component-input">
+                    <div class="input-title">
+                        <span class="span-required"></span>
+                        <span class="span-text">理算机构</span>
+                    </div>
+                    <input type="text" name="" id="" disabled value="武汉理算中心">
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="form-area footer-button">
+            <div class="form-component button-submit">
+                <button class="submit">提交</button>
+            </div>
+            <!-- <div class="form-component button-submit">
+                <button class="submit">提交</button>
+            </div> -->
+        </div>
+
+        </form>
+    </div>
+
+
+
+
+
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <script src="./form/lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="./form/js/common.js"></script>
+    <script src="./form/js/page.js"></script>
+</body>
+
+</html>

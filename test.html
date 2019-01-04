@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成页面</title>
+    <link rel="stylesheet" href="./form/css/page.css">
+</head>
+
+<body>
+
+    <!-- <button onclick="paste()" style="padding:5px;">点击生成</button> -->
+
+    <div class="main" style="width:1052px;margin:0 auto;">
+            <div class="distpicker" data-toggle="distpicker">
+                <select name="" id="" disabled required></select>
+                <select class="second-select" name="" id="" disabled required></select>
+                <select class="second-select" name="" id="" disabled required></select>
+            </div>
+    </div>
+
+
+
+
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <script src="./form/js/page.js"></script>
+    <script src="./form/lib/distpicker/dist/distpicker.data.min.js"></script>
+    <script src="./form/lib/distpicker/dist/distpicker.min.js"></script>
+
+    <script>
+        $("div.main").append(
+            `
+            <div data-toggle="distpicker">
+                <select required></select>
+                <select required></select>
+                <select required></select>
+            </div>
+        `
+        )
+    </script>
+</body>
+
+</html>

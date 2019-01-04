@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+html,body{
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+}
+.active{
+    border: 2px solid #03AAD4 !important;
+    margin: 0 !important;
+}
+.none{
+    display: none;
+}
+/* input:read-only,
+select:read-only{
+    background: #ccc;
+} */
+input:disabled,
+select:disabled,
+textarea:disabled{
+    background-color: #EBEBE4;
+}
+select{
+    /* text-indent: 20px; */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../images/select.png") no-repeat scroll 95% center transparent;
+}
+input[type=radio],
+input[type=checkbox],
+label{
+    cursor: pointer;
+}
+button{
+    padding: 5px 15px;
+    border-radius: 6px;
+    border: 1px solid #d2d2d2;
+    color: #777;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    /* ie */
+    line-height: 16px;
+}
+button.save{
+    color: #fff;
+    background: #00B8E5;
+    /* color: #1E90FF; */
+}
+/* button.clear{
+    color: #000;
+    background: #EEEE00;
+}
+button.delete{
+    color: #fff;
+    background: #ff0000;
+} */
+.icon-open{
+    background: url("../images/xia.png") center no-repeat;
+    /* background: url("../images/open.png") center no-repeat; */
+    background-size: 20px;
+}
+.icon-close{
+    background: url("../images/shang.png") center no-repeat;
+    /* background: url("../images/close.png") center no-repeat; */
+    background-size: 20px;
+}
+.height0{
+    height: 0;
+    min-height: 0 !important;
+}
+/* 总体结构 */
+.head{
+    height: 15px;
+}
+.main{
+    flex:1;
+    display: flex;
+    min-width: 1545px;
+    overflow: hidden;
+    color: #777;
+}
+.foot{
+    height: 15px;
+}
+/* 中间部分 */
+.left{
+    width: 200px;
+    height: 100%;
+    float: left;
+    padding:0 5px;
+    background: #fff;
+}
+.right{
+    width: 260px;
+    height: 100%;
+    float: right;
+    padding:0 5px;
+    background: #fff;
+}
+.view{
+    flex: 1;
+    height: 100%;
+    float: left;
+    padding:0 5px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.title{
+    height: 38px;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #666;
+}
+.left-main{
+    padding-top: 20px;
+}
+.left-main .left-components,
+.left-main .left-templates{
+    margin-bottom: 15px;
+}
+.left-main .left-components-head,
+.left-main .left-templates-head{
+    position: relative;
+}
+.right-main .right-component .title,
+.left-main .left-components-head .title,
+.left-main .left-templates-head .title{
+    background: #999;
+    font-size: 13px;
+    cursor: pointer;
+}
+.left-main .left-components-head .title-icon,
+.left-main .left-templates-head .title-icon{
+    width: 30px;
+    height: 38px;
+    line-height: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.left-main .left-components-main,
+.left-main .left-templates-main{
+    display: none;
+    overflow: hidden;
+    /* transition: ease-in-out 1s; */
+}
+.left-main .height{
+    height: auto;
+    transition: ease-in-out 1s;
+}
+.left-main .form-component{
+    margin: 5px 0;
+}
+.left-foot{
+    margin-top: 20px;
+}
+.left-foot .open-dialog{
+    padding: 3px 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+}
+.right-main{
+    padding-top: 20px;
+}
+.right-foot{
+    margin-top: 20px;
+    line-height: 40px;
+}
+#view-main{
+    width: 1052px;
+    height: 600px;
+    /* margin-top: 10px; */
+    overflow: auto;
+    margin: 0 auto;
+}    
+#view-main .footer-button{
+    text-align: center;
+    overflow: hidden;
+}
+#view-main .footer-button .button-submit{
+    width: 100px;
+    float: none;
+    text-align: center;
+    display: inline-block;
+}
+/* 隐藏滚动条 */
+#view-main::-webkit-scrollbar {
+    display: none;
+}
+.view-foot{
+    margin-top: 10px;
+}
+.view-foot .complete{
+    color: #fff;
+    background: #03AAD4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* 表单组件 */
+.form-component{
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 2px 0;
+}
+.form-component:hover{
+    background: #ddd;
+}
+.form-component input,
+.form-component select{
+    width: 175px;
+    height: 25px;
+    line-height: 25px;
+    color: #333;
+    border: 1px solid #777;
+    cursor: pointer;
+}
+.form-component .form-area{
+    color: #03AAD4;
+    background: #E2F6FB;
+}
+/* 属性组件 */
+
+/* for animate */
+.right-main{
+    overflow: hidden;
+}
+.right-component {
+    width: 0;
+    overflow: hidden;
+    float: left;
+}
+.right-component .title,
+.right-component .attribution-component,
+.right-component .right-foot{
+    width: 260px;
+}
+
+
+.right-component .attribution-component{
+    text-align: left;
+}
+.right-component form{
+    margin-top: 15px;
+}
+.attribution-component{
+    height: 48px;
+    line-height: 48px;
+}
+.attribution-component .right-title{
+    display: inline-block;
+    width: 95px;
+    font-size: 12px;
+    text-align: left;
+}
+.attribution-component .span-required{
+    display: inline-block;
+    width: 10px;
+    color: #ff0000;
+    font-weight: bolder;
+}
+.attribution-component input,
+.attribution-component select {
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+}
+.attribution-component input{
+    width: 155px;
+    height: 34px;
+    line-height: 34px;
+    text-align: left;
+    text-indent: 12px;
+}
+.attribution-component select{
+    width: 157px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-align-last: center;
+}
+.attribution-component input[type = radio],
+.attribution-component input[type = checkbox]{
+    width: 15px;
+    height: auto;
+    margin: 0;
+}
+
+.attribution-component .Wdate{
+    width: 75px;
+    text-indent: 2px;
+}
+/* 组件库 */
+.dialog-components .form-area-head{
+    height: 38px;
+    line-height: 38px;
+    /* color: #fff; */
+    background: #03AAD4;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    text-indent: 20px;
+}
+.dialog-components .form-area-head .area-tool{
+    float: right;
+}
+.dialog-components .form-area-main{
+    overflow: hidden;
+    padding: 10px 0;
+}
+.dialog-components .form-area-main .form-component{
+    float: left;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+}
+.form-component .input-title {
+    width: 65px;
+    display: inline-block;
+    text-align: left;
+}
+.form-component .span-required {
+    width: 5px;
+    display: inline-block;
+    color: #ff0000;
+}
+/* 实际生成页面没有的 */
+.area-tool{
+    float: right;
+}
+.active-th{
+    color: #00B8E5;
+    /* border: 2px solid #03AAD4 !important; */
+}
+/* 实际页面去掉 */
+#view-main .form-component{
+    cursor: pointer;
+}
+#view-main .form-component:hover{
+    background: #ddd;
+}
+#view-main .form-component-two {
+    width: 1014px;
+}
+#view-main .form-area{
+    border: 1px solid #ccc;
+}
+/* chrome以外   有disabled效果*/
+#view-main .form-component input,
+#view-main .form-component select,
+#view-main .form-component textarea{
+    pointer-events:none;
+}
+
+
+/* 预览界面 */
+#view-main .form-area {
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+#view-main .form-area-head{
+    height: 38px;
+    line-height: 38px;
+    background: #f6f6f6;
+    text-align: left;
+    text-indent: 15px;
+    border-bottom: 1px solid #ccc;
+}
+#view-main .form-area-head .area-title{
+    float: left;
+    font-weight: bold;
+}
+#view-main .form-area-head .area-title-icon{
+    display: inline-block;
+    width: 30px;
+    height: 38px;
+    cursor: pointer;
+}
+#view-main .form-area-main{
+    /* min-height: 50px; */
+    overflow: hidden;
+}
+#view-main .form-component{
+    float: left;
+    width: 318px;
+    height: 40px;
+    line-height: 40px;
+    padding: 7px 15px;
+    text-align: left;
+}
+/* 多行文本 */
+#view-main .component-textarea {
+    width: 1014px;
+    /* height: 112px; */
+    height: auto;
+}
+/* 多级下拉 */
+#view-main .component-multi-select {
+    width: 1014px;
+    /* height: auto; */
+}
+#view-main .form-component .second-select{
+    width: 318px;
+    margin-left: 26px;
+}
+
+#view-main .form-component .input-title {
+    width: 92px;
+    display: inline-block;
+    text-align: left;
+}
+#view-main .form-component .span-required {
+    width: 5px;
+    display: inline-block;
+    color: #ff3434;
+    font-weight: bolder;
+}
+#view-main .form-component .span-text {
+    display: inline-block;
+}
+/* 一般input,select */
+#view-main .form-component input,
+#view-main .form-component select,
+#view-main .form-component textarea{
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+}
+#view-main .form-component input{
+    width: 218px;
+    height: 34px;
+    line-height: 34px;
+    text-align: left;
+    text-indent: 12px;
+}
+#view-main .form-component select{
+    width: 220px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-align-last: center;
+}
+#view-main .form-component .radio-box,
+#view-main .form-component .checkbox-box{
+    margin-right: 5px;
+    display: inline-block;
+}
+#view-main .form-component .radio,
+#view-main .form-component .checkbox{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    vertical-align: -5px;
+}
+/* 多行文本 */
+#view-main .form-component .input-title{
+    vertical-align: top;
+}
+#view-main .form-component textarea{
+    width: 904px;
+    padding: 5px;
+    line-height: 20px;
+    text-align: left;
+    text-indent: 15px;
+}
+/* 日期选择 */
+#view-main .Wdate {
+    background-position: 190px;
+}
+.WdateDiv {
+    width: 220px;
+}
+/* 地址输入栏 */
+#view-main .component-adress{
+    width: 1014px;
+    height: 95px;
+}
+#view-main .component-adress .distpicker{
+    display: inline-block;
+}
+#view-main .component-adress input{
+    width: 914px;
+    margin: 15px 0 0 96px;
+}
+/* 时间范围 */
+#view-main .component-time-range{
+    width: 666px;
+}
+#view-main .component-time-range .end-date{
+    width: 316px;
+    margin-left: 26px;
+    background-position: 290px;
+}
+/* 双select */
+#view-main .component-double-select{
+    width: 666px;
+}
+#view-main .component-double-select .second-select{
+    width: 318px;
+    margin-left: 26px;
+}
+/* 表格 */
+#view-main .component-table{
+    width: 1014px;
+    height: auto;
+}
+#view-main .component-table table{
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+#view-main .component-table table td,
+#view-main .component-table table th{
+    text-align: center;
+    border: 1px solid #ccc;
+}
+#view-main .component-table table td .form-component,
+#view-main .component-table table th .form-component{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    float: none;
+    display: inline-block;
+}
+#view-main .component-table td input,
+#view-main .component-table td select{
+    width: 120px;
+    border: 0;
+    text-align: center;
+    text-indent: 0;
+}
+#view-main .component-table-more td input,
+#view-main .component-table-more td select{
+    width: 80px;
+}
+#view-main .component-table td input.count{
+    width: 80px;
+}
+#view-main .component-table td .Wdate{
+    background-position: 100px;
+}

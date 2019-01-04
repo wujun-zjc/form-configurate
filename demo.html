@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <script type="application/javascript">
+        $(function() {
+
+            $("#list li p").css("color", "royalblue");
+
+            $(".main ul li ").click(function() {
+                $(this).children("ul .menu").slideToggle();
+
+                //siblings() 表示当前元素的所有同胞元素
+                $(this).siblings().children("ul .menu").slideUp();
+
+            });
+        });
+    </script>
+    <style type="text/css">
+        .main {
+            width: 300px;
+            height: 520px;
+            border: 1px red solid;
+        }
+        
+        .menulist {
+            list-style: none;
+        }
+        
+        .menu {
+            color: darkmagenta;
+            font: "微软雅黑";
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <ul id="list">
+            <li class="menulist">
+                <p>电视</p>
+                <ul class="menu" style="display:block">
+                    <li>长虹电视</li>
+                    <li>sky电视</li>
+                    <li>三星电视</li>
+                </ul>
+            </li>
+
+            <li class="menulist">
+                <p>电脑</p>
+                <ul class="menu">
+                    <li>索尼电脑</li>
+                    <li>戴尔电脑</li>
+                    <li>华硕电脑</li>
+                </ul>
+            </li>
+
+            <li class="menulist">
+                <p>ipdad</p>
+                <ul class="menu">
+                    <li>Apple IPad nimi</li>
+                    <li>Apple IPad Air Pro</li>
+                    <li>Apple IPad Air2</li>
+                </ul>
+            </li>
+            <li class="menulist">
+                <p>手机</p>
+                <ul class="menu">
+                    <li>OPPO</li>
+                    <li>VIVO</li>
+                    <li>小米</li>
+                    <li>华为</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

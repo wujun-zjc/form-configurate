@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "attributes": null,
+    "code": "1",
+    "msg": "登录成功",
+    "obj": {
+        "policyId": "obphG4_gNOL0mPnJUnpCVOJn28yw"
+    },
+    "value": "b-value",
+    "a":"a-B地址",
+    "b":"b-B地址",
+    "c":"c-B地址",
+    "d":"d-B地址",
+    "e":"e-B地址"
+}

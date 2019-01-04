@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form/css/flow.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="white-space"></div>
+            <div class="white">
+
+                <div class="left">
+                    <div class="title">
+                        <div class="title-button">
+                            <img src="./form/images/add.png" alt="">
+                        </div>
+                        <div class="title-button button-right">
+                            <img src="./form/images/delete.png" alt="">
+                        </div>
+                    </div>
+                    <div class="left-main">
+                        <ul class="risk-kinds">
+                            <li class="active">数码意外险</li>
+                            <!-- <li>1111111111</li>
+                            <li>1111111111</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">数码意外险</div>
+                    <ul class="flow-steps">
+                        <li class="baoan">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="diaodu">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="ckds">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="hesun">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="lian">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="zlsj">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="lisuan">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="hepei">
+                            <img src="./form/images/next.png"/>
+                        </li>
+                        <li class="jiean"></li>
+                    </ul>
+                    <div class="operation">
+                        <button class="design">设计表单</button>
+                        <button class="button-right">重新配置工作流</button>
+                        <button class="button-right">取消发布</button>
+                        <button class="button-right">保存</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <script>
+        $(".flow-steps li").click( function (e) {
+            if(event.target==this){
+                
+                console.log(e)
+            }
+        })
+    </script>
+</body>
+
+</html>

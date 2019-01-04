@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "attributes": null,
+    "code": "1",
+    "msg": "登录成功",
+    "obj": {
+        "policyId": "obphG4_gNOL0mPnJUnpCVOJn28yw"
+    },
+    "value": "c-value"
+}

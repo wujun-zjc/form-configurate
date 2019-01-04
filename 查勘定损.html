@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查勘定损</title>
+    <link rel="stylesheet" href="./form/css/page.css">
+</head>
+
+<body>
+
+    <div class="main" id="view-main" style="width:1052px;margin:0 auto;">
+        <form id="page" action="" onsubmit="return surveySubmitPage()">
+        <!-- 实际生成页面内容 -->
+
+            <div class="form-area area-default">
+                <div class="form-area-head">
+                    <span class="area-title">保单信息</span>
+                    <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+                </div>
+                <div class="form-area-main">
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">保单号</span>
+                        </div>
+                        <input type="text" name="policyNo" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">产品</span>
+                        </div>
+                        <input type="text" name="product" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">保险金额</span>
+                        </div>
+                        <input type="text" name="reportAmount" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">被保险人</span>
+                        </div>
+                        <input type="text" name="be-risk-man" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">投保人</span>
+                        </div>
+                        <input type="text" name="pull-risk-man" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">合同号码</span>
+                        </div>
+                        <input type="text" name="Contract-number" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">承保机构</span>
+                        </div>
+                        <input type="text" name="Underwriting-nstitu" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">设备码</span>
+                        </div>
+                        <input type="text" name="Device-code" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">保险期限</span>
+                        </div>
+                        <input type="text" name="Insurance-period" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">出险次数</span>
+                        </div>
+                        <input type="text" name="Risk-frequency" id="" placeholder="" required="" disabled="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-area area-xzba">
+                <div class="form-area-head">
+                    <span class="area-title">查勘信息</span>
+                    <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+                </div>
+                <div class="form-area-main">
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">客户姓名</span>
+                        </div>
+                        <input type="text" name="reporter-name" id="" placeholder="" required="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">联系电话</span>
+                        </div>
+                        <input type="text" name="reporterTel" id="" placeholder="" required="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">设备串码</span>
+                        </div>
+                        <input type="text" name="equipment-cod" id="" placeholder="" disabled="" required="">
+                    </div>
+                    <div class="form-component component-date">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">出险日期</span>
+                        </div>
+                        <input class="Wdate" type="text" id="" name="accident-time" onclick="WdatePicker({'readOnly':true,'dateFmt':'yyyy-MM-dd HH:mm:ss'})" required="" placeholder="" disabled>
+                    </div>
+                    <div class="form-component component-date">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">报案时间</span>
+                        </div>
+                        <input class="Wdate" type="text" id="" name="create-time" onclick="WdatePicker({'readOnly':true,'dateFmt':'yyyy-MM-dd HH:mm:ss'})" required="" placeholder="" disabled>
+                    </div>
+                    <div class="form-component component-date">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">查勘日期</span>
+                        </div>
+                        <input class="Wdate" type="text" id="" name="survey-time" onclick="WdatePicker({'readOnly':true,'dateFmt':'yyyy-MM-dd HH:mm:ss'})" required="" placeholder="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">赔案号</span>
+                        </div>
+                        <input type="text" name="case_no" id="" placeholder="" required="" disabled="">
+                    </div>
+                    <div class="form-component component-double-select">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">出险原因</span>
+                        </div>
+                        <select name="first-select" id="" required="">
+                            <option value="635" selected="">数码产品意外险</option>
+                        </select>
+                        <select class="second-select" name="second-select" id="" required="">
+                            <option value="617" selected="">-- 请选择 --</option>
+                            <option value="618">屏幕碎裂</option>
+                            <option value="619">进水</option>
+                            <option value="620">坠落</option>
+                            <option value="616">挤压</option>
+                            <option value="621">碰撞</option>
+                            <option value="622">火灾</option>
+                            <option value="623">爆炸</option>
+                            <option value="624">雷击</option>
+                            <option value="625">超负荷</option>
+                            <option value="626">超电压</option>
+                            <option value="627">电涌</option>
+                            <option value="628">其他</option>
+                            <option value="629">延长报修</option>
+                        </select>
+                    </div>
+                    <div class="form-component component-adress">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">维修地址</span>
+                        </div>
+                        <div class="distpicker" data-toggle="distpicker">
+                            <select name="province" required="" class=''></select>
+                            <select class="second-select link-city" name="city" required=""></select>
+                            <select class="second-select" name="county" required=""></select>
+                        </div>
+                        <input type="text" name="detail-address" id="" placeholder="请填写详细地址" required="">
+                    </div>
+                    <div class="form-component component-input">
+                        <div class="input-title">
+                            <span class="span-required"></span>
+                            <span class="span-text">新设备码</span>
+                        </div>
+                        <input type="text" name="New-device-code" id="" placeholder="">
+                    </div>
+                    <div class="form-component component-date">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">上门时间</span>
+                        </div>
+                        <input class="Wdate" type="text" id="" name="door-time" onclick="WdatePicker({'readOnly':true,'dateFmt':'yyyy-MM-dd HH:mm:ss'})"
+                            required="" placeholder="">
+                    </div>
+                    <div class="form-component component-select">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">维修方式</span>
+                        </div>
+                        <select class="link-maintain-type" name="maintenance-mode" id="" required="">
+                            <option value="" selected=""> - 请选择 - </option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-area area-default">
+                <div class="form-area-head">
+                    <span class="area-title">定损信息</span>
+                    <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+                </div>
+                <div class="form-area-main">
+                    <div class="form-component component-select">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">设备分类</span>
+                        </div>
+                        <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                        <select class="link-equipment-classification" name="Equipment-classifica" id="" required="">
+                            <option value="" selected="">-- 请选择 --</option>
+                        </select>
+                    </div>
+                    <div class="form-component component-select">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">设备品牌</span>
+                        </div>
+                        <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                        <select class="link-equipment-brand" name="Equipment-brand" id="" required="">
+                            <option value="" selected="">-- 请选择 --</option>
+                        </select>
+                    </div>
+                    <div class="form-component component-select">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">设备型号</span>
+                        </div>
+                        <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                        <select class="link-equipment-type" name="Equipment-type" id="" required="">
+                            <option value="" selected="">-- 请选择 --</option>
+                        </select>
+                    </div>
+                    <div class="form-component component-select">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">设备属性</span>
+                        </div>
+                        <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                        <select class="link-equipment-attribute" name="Device-attribute" id="" required="">
+                            <option value="" selected="">-- 请选择 --</option>
+                        </select>
+                    </div>
+                    <div class="form-component component-table">
+                        <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <th class="table-special table-check">
+                                        <!-- 选择  -->
+                                        <input type="checkbox" name="" class="checkbox check-all" id="" value="">
+                                    </th>
+                                    <th class="">故障大类</th>
+                                    <th class="">故障小类</th>
+                                    <th class="">维修方案</th>
+                                    <th class="th-count">维修价格</th>
+
+
+                                    <th class="table-special table-remarks">备注</th>
+                                    <th class="table-special table-operation">操作</th>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" class="checkbox" id="" value="" checked="">
+                                    </td>
+                                    <td>
+                                        <div class="form-component component-select">
+
+                                            <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                                            <select class="link-fault-big" name="bigFault" id="" required="">
+                                                <option value="" selected="">-- 请选择 --</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-component component-select">
+
+                                            <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                                            <select class="link-fault-small" name="Fault" id="" required="">
+                                                <option value="" selected="">-- 请选择 --</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-component component-select">
+
+                                            <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                                            <select class="link-maintenance-plan" name="MaintenancePlan" id="" required="">
+                                                <option value="" selected="">-- 请选择 --</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-component component-input">
+                                            <input class="count-part count-money link-maintenance-price" type="text" name="MaintenancePrice" id="" placeholder="" required=""
+                                                disabled="">
+                                        </div>
+                                    </td>
+
+
+                                    <td>
+                                        <input type="text" name="surveyRemarks" id="" class='repairRemarks'>
+                                    </td>
+                                    <td><button type="button" class="delete-row">删除</button></td>
+
+                                </tr>
+                                <tr class="last-empty-tr">
+                                    <!-- <td class="table-check-all">
+                                    <button type="button" class="check-all" onclick="checkAll(event)">全选</button>
+                                </td> -->
+                                    <td class="table-special  table-add-row">
+                                        <button type="button" class="add-row">新增</button>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>合计 <input class="count risk-process loss-cost" type="text"></td>
+
+
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-area area-default">
+                <div class="form-area-head">
+                    <span class="area-title">理赔费用信息</span>
+                    <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+                </div>
+                <div class="form-area-main">
+                    <div class="form-component component-table">
+                        <table width="1014px" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <th class="table-special table-check">
+                                        <!-- 选择  -->
+                                        <input type="checkbox" name="" class="checkbox check-all" id="" value="">
+                                    </th>
+                                    <th class="">费用类型</th>
+                                    <th class="">费用金额</th>
+
+                                    <th class="table-special table-remarks">备注</th>
+                                    <th class="table-special table-operation">操作</th>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" class="checkbox" id="" value="" checked="">
+                                    </td>
+                                    <td>
+                                        <div class="form-component component-select">
+
+                                            <!-- <input type="text" name="" id="" placeholder="输入框" disabled required> -->
+                                            <select name="CostType" id="" required="">
+                                                <option value="" selected="">-- 请选择 --</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-component component-input">
+                                            <input type="text" class="count-part count-money" name="MaintenancePrice" id="" placeholder="" required="">
+                                        </div>
+                                    </td>
+
+
+                                    <td>
+                                        <input type="text" name="costRemarks" id="">
+                                    </td>
+                                    <td><button type="button" class="delete-row">删除</button></td>
+
+                                </tr>
+                                <tr class="last-empty-tr">
+                                    <!-- <td class="table-check-all">
+                                    <button type="button" class="check-all" onclick="checkAll(event)">全选</button>
+                                </td> -->
+                                    <td class="table-special  table-add-row">
+                                        <button type="button" class="add-row">新增</button>
+                                    </td>
+                                    <td></td>
+                                    <td>合计 <input class="count risk-process fee-cost" type="text"></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-area area-default">
+                <div class="form-area-head">
+                    <span class="area-title">其它信息</span>
+                    <div class="area-title-icon icon-open" onclick="openClose(event)"></div>
+
+                </div>
+                <div class="form-area-main">
+                    <div class="form-component component-textarea">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">查勘经过</span>
+                        </div>
+                        <textarea placeholder="" name="After-investigation" id="" rows="5" maxlength="1000" required=""></textarea>
+                    </div>
+                    <div class="form-component component-textarea">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">查勘意见</span>
+                        </div>
+                        <textarea placeholder="" name="Prospecting-opinion" id="" rows="5" maxlength="1000" required=""></textarea>
+                    </div>
+                    <div class="form-component component-textarea">
+                        <div class="input-title">
+                            <span class="span-required">*</span>
+                            <span class="span-text">查勘结论</span>
+                        </div>
+                        <textarea placeholder="" name="Survey-conclusion" id="" rows="5" maxlength="1000" required=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-area footer-button">
+                <div class="form-component button-save">
+                    <button class="save">暂存</button>
+                </div>
+                <div class="form-component button-submit">
+                    <button class="submit">提交</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="./form/lib/js/jquery-1.8.0.min.js"></script>
+    <script src="./form/lib/js/form.js"></script>
+    <script src="./form/lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="./form/lib/distpicker/dist/distpicker.data.min.js"></script>
+    <script src="./form/lib/distpicker/dist/distpicker.min.js"></script>
+    <script src="./form/js/base64.js"></script>
+    <script src="./form/js/common.js"></script>
+    <script src="./form/js/page.js"></script>
+
+    <script>
+        // 保单列表
+        var policyList = {
+            "url": "http://192.168.100.45:9191/server/claimDataController.do?esType=policyService&method=getPolicy",
+            "data": {
+                // caseNo: "4123517212018000067"
+                caseNo: "411201721201840"
+            },
+            success: function (res) {
+                if(res.obj){
+                    var policyRisk = res.obj.policyRisk
+                    for (var i = policyRisk.length - 1; i >= 0; i--) {
+                        if (policyRisk[i].insureAmount == 0) {
+                            policyRisk.splice(i, 1)
+                        }
+                    }
+                    var detail = {
+                        "policy": res.obj.policy,
+                        "policyRisk": policyRisk,
+                        "policyRiskItem": res.obj.policyRiskItem
+                    }
+                    PolicyInformation(detail)
+                }
+            },
+            fail: function (res) {
+                console.log('fail', res)
+            }
+        }
+        // 查勘信息
+        var policyDetail = {
+            "url": "http://192.168.100.45:9191/server/claimDataController.do?esType=reportService&method=getReport",
+            "data": {
+                // caseNo: "4123517212018000067"
+                caseNo: "411201721201840"
+            },
+            success: function (res2) {
+                console.log('res2',res2.obj)
+                SurveyInformation(res2.obj)
+            },
+            fail: function(res){
+                console.log('fail',res)
+            }
+        }
+        var costInformation = {
+            "url": "http://192.168.100.45:9191/server/claimDataController.do?esType=configFeeService&method=get",
+            "data": {
+
+            },
+            success: function (res) {
+                console.log('费用', res.obj)
+                var costArr = []
+                for(var i=0; i<res.obj.length; i++){
+                    costArr.push({label:res.obj[i].name,value: res.obj[i].code})
+                }
+                console.log(costArr)
+                linkSelect($('select[name="CostType"]'), costArr);
+                // linkSelect(res)
+                // if (res.obj) {
+                //     var policyRisk = res.obj.policyRisk
+                //     for (var i = policyRisk.length - 1; i >= 0; i--) {
+                //         if (policyRisk[i].insureAmount == 0) {
+                //             policyRisk.splice(i, 1)
+                //         }
+                //     }
+                //     var detail = {
+                //         "policy": res.obj.policy,
+                //         "policyRisk": policyRisk,
+                //         "policyRiskItem": res.obj.policyRiskItem
+                //     }
+                //     PolicyInformation(detail)
+                // }
+            },
+            fail: function (res) {
+                console.log('fail', res)
+            }
+        }
+        getApiService(policyList);
+        getApiService(policyDetail);
+        getApiService(costInformation);
+
+
+    </script>
+
+</body>
+
+</html>

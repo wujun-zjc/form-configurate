@@ -1,0 +1,193 @@
+.dialog {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    /* ie */
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+.dialog .dialog-body {
+    width: 1030px;
+    height: 80%;
+    margin: 60px auto;
+    background: #fff;
+}
+
+.dialog-body .close-dialog {
+    width: 30px;
+    float: right;
+    cursor: pointer;
+}
+
+.dialog-main {
+    min-height: 175px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.dialog-footer {
+    height: 48px;
+    line-height: 48px;
+    /* margin-top: 15px; */
+    background: #eee;
+}
+
+.container {
+    width: 250px;
+    min-height: 84px;
+    max-height: 410px;
+    overflow: auto;
+    margin-right: 5px;
+    float: left;
+    border: 1px solid #d2d2d2;
+}
+
+.dialog .active .active {
+    background: #03AAD4 !important;
+    color: #fff;
+}
+.option {
+    height: 38px;
+    line-height: 38px;
+    margin: 2px;
+    background: #eee;
+    /* 手型指针 */
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    position: relative;
+}
+
+.option .option-delete {
+    position: absolute;
+    width: 30px;
+    color: #ff0000;
+    font-weight: bolder;
+    cursor: pointer;
+    /* top: 4px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: #ff0000; */
+}
+
+.option .option-selected {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    color: #333;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.option .option-selected-default {
+    color: #00BFFF;
+}
+
+.option-edit {
+    width: 260px;
+    float: right;
+}
+
+.option-edit .attribution-component input {
+    width: 185px;
+}
+
+.option-edit .attribution-component .right-title {
+    width: 60px;
+}
+
+.option-edit button {
+    /* padding: 5px 40px; */
+    margin-top: 10px;
+}
+
+/* 多级下拉框选项弹窗 */
+.edit-title{
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+    background: #eee;
+}
+.edit-selects,
+.edit-options{
+    padding: 10px 0;
+    overflow: hidden;
+}
+.edit-selects .select-num{
+    /* float: left; */
+    width: 250px;
+    height: 36px;
+    border-radius: 3px;
+    text-align-last: center;
+}
+.edit-selects .edit-selects-button{
+    width: 260px;
+    float: right;
+}
+.edit-options .one-select{
+    width: 250px;
+    margin-right: 5px;
+    float: left;
+    border: 1px solid #d2d2d2;
+}
+.edit-options .edit-this-select{
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    position: relative;
+    /* cursor: pointer; */
+}
+.edit-options .edit-this-select .select-name{
+    cursor: pointer;
+}
+.edit-this-select .delete-select{
+    display: inline-block;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.dialog-multi-select-edit .container {
+    width: auto;
+    margin: 0;
+    border: 0;
+    float: unset;
+}
+.dialog-multi-select-edit .container .active {
+    background: #E2F6FB;
+}
+
+/* 各弹窗大小 */
+
+/* 下拉框选项弹窗 */
+.dialog-select-edit .dialog-body {
+    width: 560px;
+    height: auto;
+}
+/* 多级下拉框选项弹窗 */
+.dialog-multi-select-edit .dialog-body {
+    width: 810px;
+    height: auto;
+}
+/* 单选框选项弹窗 */
+.dialog-radio-edit .dialog-body {
+    width: 560px;
+    height: auto;
+}
+/* 多选框选项弹窗 */
+.dialog-checkbox-edit .dialog-body {
+    width: 560px;
+    height: auto;
+}
+
+.dialog-multi-select-edit {
+    /* display: block; */
+}

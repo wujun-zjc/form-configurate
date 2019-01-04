@@ -1,0 +1,39 @@
+@required-bgc:#abf9e7;
+
+
+input,select{
+    height: 28px !important;
+    line-height: 28px !important;
+    border-radius: 0 !important;
+}
+input:required,
+textarea:required,
+select:required{
+    background-color: @required-bgc;
+}
+.form-area{
+    .form-area-head{
+        background-color: #E0ECFF !important;
+        // background-color: rgb(168, 215, 233) !important;
+        .area-title{
+            color: #000 !important;
+        }
+    }
+}
+.input-title{
+    text-align: right !important;
+    .span-required{
+        display: none !important;
+    }
+    .span-text{
+        margin-right: 15px;
+    }
+}
+
+.form-component{
+    // border: 1px solid #d2d2d2;
+    height: 32px !important;
+    line-height: 32px !important;
+    
+    padding: 5px 15px !important;
+}
